@@ -162,6 +162,11 @@ h2 {
 }
 
 .buttonlist {
+    background-color:#08b;
+    overflow:hidden;
+}
+
+.buttonlist a {
     color: #fff;
     float: left;
     font-size: 15px;
@@ -169,10 +174,9 @@ h2 {
     text-align: center;
     text-decoration: none;
     transition: 0.5s;
-    background-color:#08b;
 }
 
-.buttonlist:hover {
+.buttonlist a:hover {
     background-color:#005cbb;
 }
 
