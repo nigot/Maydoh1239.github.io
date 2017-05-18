@@ -27,7 +27,7 @@ body {
     transition: 0.5s;
 }
 
-.topnav a:not(.active):not(.swastika):hover {
+.topnav a:not(.active):hover {
     background-color: #111;
 }
 
@@ -102,8 +102,26 @@ body {
     padding: 10px 0;
 }
 
+.imgwithp img {
+    float:left;
+    width:25%;
+}
+
+.imgwithp p {
+    float:right;
+    width:75%;
+}
+
 .content title {
     text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+.left {
+    text-align: left;
 }
 
 .center {
@@ -112,7 +130,6 @@ body {
 
 .content p:not(.center) {
     color: #333;
-    text-align: left;
     padding: 10px;
     margin: 0px;
     text-indent:10mm;
