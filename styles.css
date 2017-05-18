@@ -106,11 +106,20 @@ body {
     text-align: center;
 }
 
-.content h1, h2, p {
+.center {
+    text-align: center;
+}
+
+.content p:not(.center) {
     color: #333;
     text-align: left;
     padding: 10px;
     margin: 0px;
+    text-indent:10mm;
+}
+
+h1, h2 {
+    text-align: center;
 }
 
 h1 {
