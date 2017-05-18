@@ -161,19 +161,19 @@ h2 {
     text-align: left;
 }
 
-.buttonlist{
-    background-color:#c40233;
-    overflow: hidden;
-}
-
-.buttonlist a{
-    color: #000;
+.buttonlist {
+    color: #fff;
     float: left;
     font-size: 15px;
     padding: 15px;
     text-align: center;
     text-decoration: none;
     transition: 0.5s;
+    background-color:#08b;
+}
+
+.buttonlist:hover {
+    background-color:#005cbb;
 }
 
 a {
