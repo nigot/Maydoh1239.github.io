@@ -31,14 +31,6 @@ body {
     background-color: #111;
 }
 
-.swastika {
-    background-color: #c40233;
-}
-
-.swastika:hover {
-    background-color: #c40233;
-}
-
 .active {
     background-color: #c40233;
 }
@@ -110,9 +102,13 @@ body {
     padding: 10px 0;
 }
 
-h1, h2, p {
-    color: #333;
+.content title {
     text-align: center;
+}
+
+.content h1, h2, p {
+    color: #333;
+    text-align: left;
     padding: 10px;
     margin: 0px;
 }
