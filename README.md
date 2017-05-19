@@ -1,1 +1,3 @@
-# BEETeam0.github.io
+# Maydoh1239.github.io
+
+An informational website on the Civil War
