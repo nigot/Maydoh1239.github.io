@@ -17,12 +17,18 @@
 </div>
 
 <div class="topnav">
-  <a href="index" class="active">Overview</a>
-  <a href="abolitionists">Abolitionists</a>
-  <a href="election_of_1860">Election of 1860</a>
-  <a href="secession">Confederate Secession</a>
-  <a href="antietam">Battle of Antietam</a>
-  <a href="bibliography">Bibliography</a>
+    <a href="index" class="active">Overview</a>
+	<div class="dropdown">
+    		<a href="abolitionists">Abolitionists</a>
+		<div class="dropdown-content">
+			<a href="#">Harriet Tubman</a>
+			<a href="#">Frederick Douglass</a>
+		</div>
+	</div> 
+    <a href="election_of_1860">Election of 1860</a>
+    <a href="secession">Confederate Secession</a>
+    <a href="antietam">Battle of Antietam</a>
+    <a href="bibliography">Bibliography</a>
 </div>
 
 <div class="parallax" style="background-image: url(images/soldiers.jpg); height: 50%;">
@@ -78,8 +84,15 @@
 </div>
 
 <div class="footer">
-	<p>Copyright © 2017 – All Rights Reserved – <a target="_blank">Edmund Lam</a></p>
+	<p>Copyright © 2017 – All Rights Reserved – <a target="_blank">Edmund Lam</a> - <a onClick="top()">Go to Top</a></p>
 </div>
+
+<script>
+	
+function top() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}</script>
 
 
 
