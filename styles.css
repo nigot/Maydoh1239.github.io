@@ -32,11 +32,11 @@ body {
 }
 
 .active {
-    background-color: #c40233;
+    background-color: #08b;
 }
 
 .active:hover{
-    background-color: #9c0000;
+    background-color: #005cbb;
 }
 
 .parallax {

@@ -31,6 +31,14 @@ body {
     background-color: #111;
 }
 
+.home {
+    background-color: #08b;
+}
+
+.home:hover{
+    background-color: #005cbb;
+}
+
 .active {
     background-color: #c40233;
 }
