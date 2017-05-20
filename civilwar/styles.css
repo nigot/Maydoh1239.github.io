@@ -27,11 +27,7 @@ body {
     transition: 0.5s;
 }
 
-<<<<<<< HEAD
 .topnav a:not(.active):not(.home):hover {
-=======
-.topnav a:not(.active):hover {
->>>>>>> pr/7
     background-color: #111;
 }
 
