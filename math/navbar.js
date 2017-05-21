@@ -1,18 +1,14 @@
 document.getElementById("top").innerHTML =
 	'<div class="content">' +
-		'<h1>MAYDOH1239</h1>' +
+		'<h1>MATH PROJECTS</h1>' +
 	'</div>' +
 
 	'<div class="topnav">' +
-		'<a href="index">Home Page</a>' +
-		'<div class="dropdown">' +
-            '<a href="projects">Projects</a>' +
-            '<div class="dropdown-content">' +
-                '<a href="civilwar/index">Civil War</a>' +
-            '</div>' +
-        '</div>' +
+		'<a href="index">All Math</a>' +
+		'<a href="desmos">Desmos</a>'
 		'<a href="about">About</a>' +
-	'</div>';
+	'</div>'
+    '<a href="../index" class="home" style="float: right;">Home</a>';
 
 var linkz = document.getElementsByClassName("topnav")[0].children;
 
