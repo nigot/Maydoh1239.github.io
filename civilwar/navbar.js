@@ -22,7 +22,7 @@ document.getElementById("top").innerHTML =
             '</div>' +
         '</div>' +
 		'<a href="bibliography">Bibliography</a>' +
-        '<a href="../index.html" class="home" style="float: right;">Home</a>' +
+        '<a href="../index" class="home" style="float: right;">Home</a>' +
 	'</div>';
 
 var linkz = document.getElementsByClassName("topnav")[0].children;
