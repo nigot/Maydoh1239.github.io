@@ -4,8 +4,8 @@ document.getElementById("top").innerHTML =
 	'</div>' +
 
 	'<div class="topnav">' +
-		'<a href="../math/index">All Math</a>' +
-		'<a href="../math/desmos">Desmos</a>'
-		'<a href="../about">About</a>' +
+		'<a href="../index">All Math</a>' +
+		'<a href="../desmos">Desmos</a>'
+		'<a href="../../about">About</a>' +
 	'</div>'
     '<a href="../index" class="home" style="float: right;">Home</a>';
