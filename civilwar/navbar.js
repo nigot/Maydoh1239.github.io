@@ -25,12 +25,12 @@ document.getElementById("top").innerHTML =
         '<a href="../index.html" class="home" style="float: right;">Home</a>' +
 	'</div>';
 
-var linkz = document.getElementById("topnav")[0].children;
+var linkz = document.getElementsByClassName("topnav")[0].children;
 
 for (var i = 0; i < linkz.length; i++) {
-    alert(linkz[i].getAttribute('class'))
-	if (linkz[i].className.href === window.location.href) {
-		linkz[i].className.classList.add('active');
+    alert(linkz[i].children[0])
+	if (linkz[i].href === window.location.href) {
+		linkz[i].classList.add('active');
     } else if (linkz[i].getAttribute('class') === 'dropdown') {
         if (linkz[i].children[0].href === window.location.href){
             linkz[i].children[0].classList.add('active');
