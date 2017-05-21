@@ -28,7 +28,7 @@ document.getElementById("top").innerHTML =
 var linkz = document.getElementsByClassName("topnav")[0].children;
 
 for (var i = 0; i < linkz.length; i++) {
-    alert(linkz.className)
+    alert(linkz[i])
 	if (linkz[i].href === window.location.href) {
 		linkz[i].classList.add('active');
     } else if (linkz[i].className === "dropdown") {
