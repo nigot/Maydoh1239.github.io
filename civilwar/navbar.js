@@ -13,7 +13,8 @@ document.getElementById("top").innerHTML =
             '</div>' +
         '</div>' +
 		'<a href="election_of_1860">Election of 1860</a>' +
-		'<a href="secession">Confederate Secession</a>' +
+        '<a href="secession">Confederate Secession</a>' +
+        '<a href="antietam">Battle of Antietam</a>' +
         '<div class="dropdown">' +
             '<a href="leaders">Leaders</a>' +
             '<div class="dropdown-content">' +
