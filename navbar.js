@@ -4,7 +4,7 @@ document.getElementById("top").innerHTML =
 	'</div>' +
 
 	'<div class="topnav">' +
-		'<a href="index" class="active">Home Page</a>' +
+		'<a href="index">Home Page</a>' +
 		'<div class="dropdown">' +
             '<a href="projects">Projects</a>' +
             '<div class="dropdown-content">' +
