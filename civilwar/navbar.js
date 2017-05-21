@@ -31,7 +31,7 @@ for (var i = 0; i < linkz.length; i++) {
     alert(linkz.classList[0])
 	if (linkz[i].href === window.location.href) {
 		linkz[i].classList.add('active');
-	} else if (linkz[i].classList[0] === "dropdown")
+    } else if (linkz[i].classList[0] === "dropdown") {
         if (linkz[i].children[0].href === window.location.href){
             linkz[i].children[0].classList.add('active');
         }
