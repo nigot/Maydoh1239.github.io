@@ -31,5 +31,9 @@ for (var i = 0; i < linkz.length; i++) {
     alert(linkz[i].href)
 	if (linkz[i].href === window.location.href) {
 		linkz[i].classList.add('active');
-	}
+	} else if (linkz[i].class === "dropdown")
+        if (linkz[i].children[0].href === window.location.href){
+            linkz[i].children[0].classList.add('active');
+        }
+    }
 }
