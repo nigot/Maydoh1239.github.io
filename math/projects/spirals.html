@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html><head>
+<meta charset="utf-8">
+<title>Maydoh1239</title>
+<link rel="apple-touch-icon" sizes="180x180" href="https://maydoh1239.github.io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://maydoh1239.github.io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://maydoh1239.github.io/favicon-16x16.png">
+<link rel="manifest" href="https://maydoh1239.github.io/manifest.json">
+<link rel="mask-icon" href="https://maydoh1239.github.io/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+<div id="top">
+</div>
+
+<div class="parallax" style="background-image: url(images/spiral.png); height: 35%;">
+    <div class="layer">
+    </div>
+</div>
+
+<div class="content">
+	<h1>
+		Parametric Spirals
+	</h1>
+    <h2>
+        Edmund Lam
+    </h2>
+	<p>
+    We start a parametric spiral first by visualizing how a spiral works. We can visualize making our spiral just as how we would draw it, by starting from the center and spiraling outwards, like so:
+	</p>
+    <br>
+    <div class="center"><iframe src="https://www.desmos.com/calculator/2azrpq9wvp?embed" width="500px" height="500px" style="border: 1px solid #ccc" frameborder=0></iframe></div>
+    <br>
+    <p> We see that for every <i>t</i> in the parametric equation, our spiral will turn one degree and also get one unit further from the center. This is important because it means that our spiral will be on a circle with radius <i>t</i> at degree <i>t</i> from the center.</p>
+    <br>
+    <div class="center"><iframe src="https://www.desmos.com/calculator/jtongmnzpt?embed" width="500px" height="500px" style="border: 1px solid #ccc" frameborder=0></iframe></div>
+    <br>
+    <p> Now, the rest is only to put our idea into math. We know that the degree measure of our point, and that it is on a circle, so we use the fact that given the radian of our point on a circle, the <i>(x,y)</i> point is equal to <i>(r</i>cos<i>(d)</i>,<i>r</i>sin<i>(d))</i> if <i>r</i> is the radius and <i>d</i> is the direction. Now, since we also know that the degree and radius are equal, we get our equation, <i>(t</i>cos<i>(t)</i>,<i>t</i>sin<i>(t))</i>.</p>
+    <br>
+    <div class="center"><iframe src="https://www.desmos.com/calculator/tctytmmo6m?embed" width="500px" height="500px" style="border: 1px solid #ccc" frameborder=0></iframe></div>
+    <div class="clear"></div>
+</div>
+
+<div class="parallax" style="background-image: url(images/spiral.png); height: 35%;">
+	<div class="layer"></div>
+</div>
+
+<div id="footer">
+</div>
+
+<script src="navbar.js"></script>
+<script src="footer.js"></script>
+
+
+
+</body></html>

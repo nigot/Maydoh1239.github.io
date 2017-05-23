@@ -27,24 +27,16 @@ body {
     transition: 0.5s;
 }
 
-.topnav a:not(.active):not(.home):hover {
+.topnav a:not(.active):hover {
     background-color: #111;
 }
 
-.home {
+.active {
     background-color: #08b;
 }
 
-.home:hover{
-    background-color: #005cbb;
-}
-
-.active {
-    background-color: #c40233;
-}
-
 .active:hover{
-    background-color: #9c0000;
+    background-color: #005cbb;
 }
 
 .parallax {
@@ -225,8 +217,7 @@ h2 {
 }
 
 a {
-    color: #08b;
-    font-size: inherit;
+    color: inherit;
     text-decoration: none;
     transition: 0.5s;
 }

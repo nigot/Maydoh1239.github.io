@@ -27,7 +27,7 @@ body {
     transition: 0.5s;
 }
 
-.topnav a:not(.active):hover {
+.topnav a:not(.active):not(.home):hover {
     background-color: #111;
 }
 
@@ -116,7 +116,7 @@ body {
     text-align: center;
 }
 
-.content p:not(.quote) {
+.content p:not(.quote):not(.center) {
     color: #333;
     padding: 10px;
     margin: 0px;
@@ -225,7 +225,8 @@ h2 {
 }
 
 a {
-    color: inherit;
+    color: #08b;
+    font-size: inherit;
     text-decoration: none;
     transition: 0.5s;
 }
