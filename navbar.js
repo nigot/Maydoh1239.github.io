@@ -9,6 +9,7 @@ document.getElementById("top").innerHTML =
             '<a href="projects">Projects</a>' +
             '<div class="dropdown-content">' +
                 '<a href="civilwar/index">Civil War</a>' +
+                '<a href="math/index">Math</a>' +
             '</div>' +
         '</div>' +
 		'<a href="about">About</a>' +
