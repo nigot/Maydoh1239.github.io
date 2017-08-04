@@ -1,6 +1,3 @@
-/*
-	Copyright (c) <2011, 2012> Rootof Creations HB, rootof.com, kickassapp.com
-*/
 var thing = 2147483647;
 (function(window) {
 (function(window,document,location,setTimeout,decodeURIComponent,encodeURIComponent){var global=this;var channelId=Math.floor(Math.random()*10000);var emptyFn=Function.prototype;var reURI=/^((http.?:)\/\/([^:\/\s]+)(:\d+)*)/;var reParent=/[\-\w]+\/\.\.\//;var reDoubleSlash=/([^:])\/\//g;var namespace="";var easyXDM={};var _easyXDM=window.easyXDM;var IFRAME_PREFIX="easyXDM_";var HAS_NAME_PROPERTY_BUG;var useHash=false;var flashVersion;var HAS_FLASH_THROTTLED_BUG;function isHostMethod(object,property){var t=typeof object[property];return t=='function'||(!!(t=='object'&&object[property]))||t=='unknown';}
