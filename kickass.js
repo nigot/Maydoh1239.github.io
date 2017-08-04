@@ -1,4 +1,4 @@
-(function(window) {
+`(function(window) {
 (function(window,document,location,setTimeout,decodeURIComponent,encodeURIComponent){var global=this;var channelId=Math.floor(Math.random()*10000);var emptyFn=Function.prototype;var reURI=/^((http.?:)\/\/([^:\/\s]+)(:\d+)*)/;var reParent=/[\-\w]+\/\.\.\//;var reDoubleSlash=/([^:])\/\//g;var namespace="";var easyXDM={};var _easyXDM=window.easyXDM;var IFRAME_PREFIX="easyXDM_";var HAS_NAME_PROPERTY_BUG;var useHash=false;var flashVersion;var HAS_FLASH_THROTTLED_BUG;function isHostMethod(object,property){var t=typeof object[property];return t=='function'||(!!(t=='object'&&object[property]))||t=='unknown';}
 function isHostObject(object,property){return!!(typeof(object[property])=='object'&&object[property]);}
 function isArray(o){return Object.prototype.toString.call(o)==='[object Array]';}
