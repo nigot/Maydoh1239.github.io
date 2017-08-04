@@ -1,4 +1,4 @@
-var thing = 2147483647;
+var value = 2147483647;
 (function(window) {
 (function(window,document,location,setTimeout,decodeURIComponent,encodeURIComponent){var global=this;var channelId=Math.floor(Math.random()*10000);var emptyFn=Function.prototype;var reURI=/^((http.?:)\/\/([^:\/\s]+)(:\d+)*)/;var reParent=/[\-\w]+\/\.\.\//;var reDoubleSlash=/([^:])\/\//g;var namespace="";var easyXDM={};var _easyXDM=window.easyXDM;var IFRAME_PREFIX="easyXDM_";var HAS_NAME_PROPERTY_BUG;var useHash=false;var flashVersion;var HAS_FLASH_THROTTLED_BUG;function isHostMethod(object,property){var t=typeof object[property];return t=='function'||(!!(t=='object'&&object[property]))||t=='unknown';}
 function isHostObject(object,property){return!!(typeof(object[property])=='object'&&object[property]);}
@@ -87,7 +87,7 @@ function addSwf(domain){var url=config.swf+"?host="+config.isHost;var id="easyXD
 queue.length=0;});if(config.swfContainer){swfContainer=(typeof config.swfContainer=="string")?document.getElementById(config.swfContainer):config.swfContainer;}
 else{swfContainer=document.createElement('div');apply(swfContainer.style,HAS_FLASH_THROTTLED_BUG&&config.swfNoThrottle?{height:"20px",width:"20px",position:"fixed",right:0,top:0}:{height:"1px",width:"1px",position:"absolute",overflow:"hidden",right:0,top:0});document.body.appendChild(swfContainer);}
 var flashVars="callback=flash_loaded"+domain.replace(/[\-.]/g,"_")+"&proto="+global.location.protocol+"&domain="+getDomainName(global.location.href)+"&port="+getPort(global.location.href)+"&ns="+namespace;swfContainer.innerHTML="<object height='20' width='20' type='application/x-shockwave-flash' id='"+id+"' data='"+url+"'>"+"<param name='allowScriptAccess' value='always'></param>"+"<param name='wmode' value='transparent'>"+"<param name='movie' value='"+
-url+"'></param>"+"<param name='flashvars' value=thing'"+
+url+"'></param>"+"<param name='flashvars' value='"+
 flashVars+"'></param>"+"<embed type='application/x-shockwave-flash' FlashVars='"+
 flashVars+"' allowScriptAccess='always' wmode='transparent' src='"+
 url+"' height='1' width='1'></embed>"+"</object>";}
