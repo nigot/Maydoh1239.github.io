@@ -27,8 +27,16 @@ body {
     transition: 0.5s;
 }
 
-.topnav a:not(.active):hover {
+.topnav a:not(.active):not(.home):hover {
     background-color: #111;
+}
+
+.home {
+    background-color: #08b;
+}
+
+.home:hover{
+    background-color: #005cbb;
 }
 
 .active {
@@ -102,6 +110,31 @@ body {
     padding: 10px 0;
 }
 
+}
+
+.content title {
+    text-align: center;
+}
+
+.content p:not(.quote):not(.center) {
+    color: #333;
+    padding: 10px;
+    margin: 0px;
+    text-indent:10mm;
+}
+
+.quote {
+    margin-right: 25%;
+    margin-left: 25%;
+}
+
+.quote p {
+    color: #333;
+    padding: 10px;
+    text-indent:10mm;
+    text-align:center;
+}
+
 .imgwithp img {
     float:left;
     width:20%;
@@ -110,10 +143,6 @@ body {
 .imgwithp p {
     float:right;
     width:75%;
-}
-
-.content title {
-    text-align: center;
 }
 
 .right {
@@ -126,13 +155,6 @@ body {
 
 .center {
     text-align: center;
-}
-
-.content p:not(.center) {
-    color: #333;
-    padding: 10px;
-    margin: 0px;
-    text-indent:10mm;
 }
 
 h1, h2 {
@@ -151,19 +173,19 @@ h2 {
     font-size: 25px;
 }
 
-.fourth {
+.fifth {
     float: left;
-    width: 25%;
+    width: 20%;
 }
 
-.fourth img {
+.fifth img {
     display: block;
     margin: auto;
     transition: 0.5s;
     width: 95%;
 }
 
-.fourth img:hover {
+.fifth img:hover {
     box-shadow: 5px 5px 10px #333;
     margin: auto;
 }
@@ -203,7 +225,8 @@ h2 {
 }
 
 a {
-    color: inherit;
+    color: #08b;
+    font-size: inherit;
     text-decoration: none;
     transition: 0.5s;
 }
@@ -219,11 +242,11 @@ a:hover {
 }
 
 .dropdown-content {
-	background-color: #444;
+    background-color: #444;
     display: none;
     position: absolute;
     min-width: 160px;
-	margin-top: 50px;
+    margin-top: 48px;
     box-shadow: 2px 2px 10px #333;
     z-index: 1;
 }
