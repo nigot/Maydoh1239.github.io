@@ -1,25 +1,96 @@
 var value = 2147483647;
 (function(window) {
-(function(window,document,location,setTimeout,decodeURIComponent,encodeURIComponent){var global=this;var channelId=Math.floor(Math.random()*10000);var emptyFn=Function.prototype;var reURI=/^((http.?:)\/\/([^:\/\s]+)(:\d+)*)/;var reParent=/[\-\w]+\/\.\.\//;var reDoubleSlash=/([^:])\/\//g;var namespace="";var easyXDM={};var _easyXDM=window.easyXDM;var IFRAME_PREFIX="easyXDM_";var HAS_NAME_PROPERTY_BUG;var useHash=false;var flashVersion;var HAS_FLASH_THROTTLED_BUG;function isHostMethod(object,property){var t=typeof object[property];return t=='function'||(!!(t=='object'&&object[property]))||t=='unknown';}
-function isHostObject(object,property){return!!(typeof(object[property])=='object'&&object[property]);}
-function isArray(o){return Object.prototype.toString.call(o)==='[object Array]';}
-function hasFlash(){try{var activeX=new ActiveXObject("ShockwaveFlash.ShockwaveFlash");flashVersion=Array.prototype.slice.call(activeX.GetVariable("$version").match(/(\d+),(\d+),(\d+),(\d+)/),1);HAS_FLASH_THROTTLED_BUG=parseInt(flashVersion[0],10)>9&&parseInt(flashVersion[1],10)>0;activeX=null;return true;}
-catch(notSupportedException){return false;}}
-var on,un;if(isHostMethod(window,"addEventListener")){on=function(target,type,listener){target.addEventListener(type,listener,false);};un=function(target,type,listener){target.removeEventListener(type,listener,false);};}
-else if(isHostMethod(window,"attachEvent")){on=function(object,sEvent,fpNotify){object.attachEvent("on"+sEvent,fpNotify);};un=function(object,sEvent,fpNotify){object.detachEvent("on"+sEvent,fpNotify);};}
-else{throw new Error("Browser not supported");}
-var domIsReady=false,domReadyQueue=[],readyState;if("readyState"in document){readyState=document.readyState;domIsReady=readyState=="complete"||(~navigator.userAgent.indexOf('AppleWebKit/')&&(readyState=="loaded"||readyState=="interactive"));}
-else{domIsReady=!!document.body;}
-function dom_onReady(){if(domIsReady){return;}
-domIsReady=true;for(var i=0;i<domReadyQueue.length;i++){domReadyQueue[i]();}
-domReadyQueue.length=0;}
-if(!domIsReady){if(isHostMethod(window,"addEventListener")){on(document,"DOMContentLoaded",dom_onReady);}
-else{on(document,"readystatechange",function(){if(document.readyState=="complete"){dom_onReady();}});if(document.documentElement.doScroll&&window===top){var doScrollCheck=function(){if(domIsReady){return;}
-try{document.documentElement.doScroll("left");}
-catch(e){setTimeout(doScrollCheck,1);return;}
-dom_onReady();};doScrollCheck();}}
-on(window,"load",dom_onReady);}
-function whenReady(fn,scope){if(domIsReady){fn.call(scope);return;}
+(function(window,document,location,setTimeout,decodeURIComponent,encodeURIComponent){
+	var global=this;
+	var channelId=Math.floor(Math.random()*10000);
+	var emptyFn=Function.prototype;
+	var reURI=/^((http.?:)\/\/([^:\/\s]+)(:\d+)*)/;
+	var reParent=/[\-\w]+\/\.\.\//;
+	var reDoubleSlash=/([^:])\/\//g;
+	var namespace="";
+	var easyXDM={};
+	var _easyXDM=window.easyXDM;
+	var IFRAME_PREFIX="easyXDM_";
+	var HAS_NAME_PROPERTY_BUG;
+	var useHash=false;
+	var flashVersion;
+	var HAS_FLASH_THROTTLED_BUG;
+	function isHostMethod(object,property){
+		var t=typeof object[property];
+		return t=='function'||(!!(t=='object'&&object[property]))||t=='unknown';
+	}
+	function isHostObject(object,property){
+		return!!(typeof(object[property])=='object'&&object[property]);
+	}
+	function isArray(o){
+		return Object.prototype.toString.call(o)==='[object Array]';
+	}
+	function hasFlash(){
+		try{
+			var activeX=new ActiveXObject("ShockwaveFlash.ShockwaveFlash");
+			flashVersion=Array.prototype.slice.call(activeX.GetVariable("$version").match(/(\d+),(\d+),(\d+),(\d+)/),1);
+			HAS_FLASH_THROTTLED_BUG=parseInt(flashVersion[0],10)>9&&parseInt(flashVersion[1],10)>0;
+			activeX=null;
+			return true;
+		}
+		catch(notSupportedException){
+			return false;
+		}
+	}
+	var on,un;
+	if(isHostMethod(window,"addEventListener")){
+		on=function(target,type,listener){target.addEventListener(type,listener,false);};
+		un=function(target,type,listener){target.removeEventListener(type,listener,false);};
+	}else if(isHostMethod(window,"attachEvent")){
+		on=function(object,sEvent,fpNotify){object.attachEvent("on"+sEvent,fpNotify);};
+		un=function(object,sEvent,fpNotify){object.detachEvent("on"+sEvent,fpNotify);};
+	}else{
+		throw new Error("Browser not supported");
+	}
+	var domIsReady=false,domReadyQueue=[],readyState;
+	if("readyState"in document){
+		readyState=document.readyState;
+		domIsReady=readyState=="complete"||(~navigator.userAgent.indexOf('AppleWebKit/')&&(readyState=="loaded"||readyState=="interactive"));
+	}else{
+		domIsReady=!!document.body;
+	}
+	function dom_onReady(){
+		if(domIsReady){
+			return;
+		}
+		domIsReady=true;
+		for(var i=0;i<domReadyQueue.length;i++){
+			domReadyQueue[i]();
+		}
+		domReadyQueue.length=0;
+	}
+	if(!domIsReady){
+		if(isHostMethod(window,"addEventListener")){
+			on(document,"DOMContentLoaded",dom_onReady);
+		}else{
+			on(document,"readystatechange",function(){
+						if(document.readyState=="complete"){
+								dom_onReady();
+						});
+					if(document.documentElement.doScroll&&window===top){
+						var doScrollCheck=function(){
+										if(domIsReady){
+											return;
+										}
+										try{
+											document.documentElement.doScroll("left");
+										}catch(e){
+											setTimeout(doScrollCheck,1);
+											return;
+										}
+										dom_onReady();
+									};
+						doScrollCheck();
+					}
+				}
+			on(window,"load",dom_onReady);
+		}
+		function whenReady(fn,scope){if(domIsReady){fn.call(scope);return;}
 domReadyQueue.push(function(){fn.call(scope);});}
 function getParentObject(){var obj=parent;if(namespace!==""){for(var i=0,ii=namespace.split(".");i<ii.length;i++){obj=obj[ii[i]];}}
 return obj.easyXDM;}
